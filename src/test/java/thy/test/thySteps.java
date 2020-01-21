@@ -80,13 +80,15 @@ public class thySteps extends BaseMethods {
     public void kaydir(String key){
         int deger=0;
 
-        List<MobileElement> elements=findElementsByKey(key);
         Random random=new Random();
-        int index=random.nextInt(elements.size());
+
 
     while(deger<4){
+        List<MobileElement> elements=findElementsByKey(key);
 
-        if(elements.size()>0){
+        int index=random.nextInt(elements.size());
+
+        if(elements.size()>=2){
             elements.get(index).click();
             break;
         }
